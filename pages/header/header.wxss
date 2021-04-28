@@ -1,0 +1,38 @@
+Page {
+  overflow: hidden;
+}
+.header-whole {
+  position: relative;
+}
+.header-whole .welcome {
+  background: linear-gradient(to right, #C8C8C8, #000);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 40rpx;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header-whole .title {
+  background: linear-gradient(to right, #C8C8C8, #000);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 52rpx;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.header-whole .orderNumber {
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  bottom: 50%;
+  border-radius: 20rpx;
+}

@@ -1,0 +1,45 @@
+.orderNubmerCpn {
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+}
+.orderNubmerCpn .top {
+  margin-top: 30rpx;
+  padding-left: 16rpx;
+}
+.orderNubmerCpn .top .number {
+  display: block;
+  font-size: 40rpx;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+.orderNubmerCpn .top .table {
+  display: block;
+  font-size: 30rpx;
+}
+.orderNubmerCpn .middle {
+  margin: 30rpx;
+}
+.orderNubmerCpn .middle .middle-view {
+  white-space: nowrap;
+  display: flex;
+}
+.orderNubmerCpn .middle .middle-view view {
+  margin: 10rpx;
+  display: inline-block;
+  width: 140rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  background-color: #F7F8FA;
+}
+.orderNubmerCpn .bottom {
+  margin-bottom: 30rpx;
+}
+.orderNubmerCpn .bottom .button {
+  width: 100%;
+}
+.checked {
+  background-color: #E6E6FA !important;
+}

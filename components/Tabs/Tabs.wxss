@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_2511171_l2q5bgaj5bm.eot?t=1619345043198');
+  /* IE9 */
+  src: url('//at.alicdn.com/t/font_2511171_l2q5bgaj5bm.eot?t=1619345043198#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOAAAsAAAAAB4AAAAMyAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqCZIJTATYCJAMMCwgABCAFhG0HORucBhHVm3fIfha4exswfs0hIfrhx4fjBL4nRrqeoO+LePhv7Nd9M/MHEUku1ZsnDomQtFQShELKVjJZt4Q1SA69jwi2XiNM7Qh4v23/xUtaSFjkdejf+slO0TEsAP64d9oUn8+yXP6a1Jg81qQuwDigwMaaFCVaQAFxw9hNBA3xMIFWk1ACObJx8kKzAowKxE18bDiaM0alIT00C7ViYRHPoNacHimOcPDEvx//UBA6kkYGJl7EWEdh75ngl0Qu+18WRCUgprPDWEbGEqAQ15XOK+QosARKrR5fmuOrIqSp3P//c9wX60b/eImoQGo7mJODiS9BrCf4knhCAhlUNOMBvMjK/ulV6mdk6mpr7mUvZGm4J3irqn13G7Wv3+PdfyemQevqyov15sZnJ56tZ6F8kZG9cb5sLodM3taN+3eXgZ2dBi3fRmkycK9hjg+z3mlWYmiXVF9ye+Nzc+XFg6ddXXuH+3r7kstyj4sGNx7pwrMyd2/dD23/hfwEqe30qkISCuxsWF+G/7RmLbQLTshNorYT9B0YVagrEpo8YCz9jxCGxN3qcsRMHrCPsTObsNBrZVlCOSwt1fnWORT5QmPrPOs87IQec1Ss/adjf5xil2NPRjsEGxfzY6ReSmvump6q64qa7uYMz2+l1fyWHwfaFBVhplk6stlDIqI5Igr+/RsGMDR/UPwA+Y2S/KLfONZP/BrKavSVrq2Az8XQTl5S5EDzDbiCH0J0bCg+BUy5uDjGw3B2inq7qIyagt+QCb14Olwc6OwjNGcIA5ImE5A1m5IW5RI0tNmCqtkutFqE7fI2fchAFqUFC6iWIHRjFZJOr5B141halE+gYRBvoeomlNDqknBu2GaGmPEvS0LBqEHu4FXfGWThl0h/o50bQWmKq/5Ik3dDnmT5cI0d0hRTpsUWzAYM9S1U0nHYND0M1AdUnDjmoUxTU/WiRPXt4QVLQsGoQe7gVd8Z2ppfhc+/0c6NoIa6nuEfafKdQ55kHaQ133Wqu5VnpsUWzAYM9S1Ukh0bGOhhqO4XUHHiBviGMlWama58srzYvt82aAWYkEmKHAVtlBedQnnXcL/57nAAAAA=') format('woff2'), url('//at.alicdn.com/t/font_2511171_l2q5bgaj5bm.woff?t=1619345043198') format('woff'), url('//at.alicdn.com/t/font_2511171_l2q5bgaj5bm.ttf?t=1619345043198') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */ url('//at.alicdn.com/t/font_2511171_l2q5bgaj5bm.svg?t=1619345043198#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-diancan:before {
+  content: "\e61b";
+}
+.icon-aixin:before {
+  color: #FC5B4C;
+  content: "\e622";
+}
+.tabs-whole .tabs-header {
+  position: relative;
+}
+.tabs-whole .tabs-header .tabs-order {
+  font-size: 60rpx;
+  color: #BA7418;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-16%);
+}
+.tabs-whole .tabs-header .tabs-title {
+  font-size: 40rpx;
+  color: #BA7418;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-40%);
+}

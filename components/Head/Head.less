@@ -1,0 +1,52 @@
+
+// 外层容器
+.orderNubmerCpn{
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+  // 上部分
+  .top{
+    margin-top: 30rpx;
+    padding-left: 16rpx;
+      .number {
+        display: block;
+        font-size: 40rpx;
+        font-weight: 700;
+        margin-bottom: 10rpx;
+      }
+
+      .table {
+        display: block;
+        font-size: 30rpx;
+      }
+  }
+  // 中间部分
+  .middle{
+    margin: 30rpx;
+    .middle-view{
+      white-space: nowrap;
+      display: flex;
+      view{
+        margin: 10rpx;
+        display: inline-block;
+        width: 140rpx;
+        height: 80rpx;
+        line-height: 80rpx;
+        text-align: center;
+        border-radius: 30rpx;
+        background-color: #F7F8FA;
+      }
+    }
+  }
+  // 底部
+  .bottom{
+    margin-bottom: 30rpx;
+    .button{
+      width: 100%;
+    }
+  }
+}
+// 点击人数时样式
+.checked{
+  background-color: #E6E6FA !important;
+}

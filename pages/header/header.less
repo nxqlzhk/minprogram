@@ -1,0 +1,44 @@
+// 让页面不滚动
+Page{
+  overflow: hidden;
+}
+.header-whole {
+  position: relative;
+  // 欢迎样式
+  .welcome{
+    // 字体渐变
+    background: linear-gradient(to right, #C8C8C8, #000);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 40rpx;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%); // 居中对齐
+  }
+  // 标题样式
+  .title{
+    // 字体渐变
+    background: linear-gradient(to right, #C8C8C8, #000);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 52rpx;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%); // 居中对齐
+    // 超出隐藏 不换行 显示...
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .orderNumber{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    bottom: 50%;
+    border-radius: 20rpx;
+  }
+}

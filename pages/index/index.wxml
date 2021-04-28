@@ -1,0 +1,171 @@
+<!-- 全局页面布局 start -->
+<view class="index-whole">
+  <!-- 头部 start -->
+  <view class="index-header">
+    <!-- 就餐人数 -->
+    <view class="index-numOrder">{{numOrder}}人就餐</view>
+    <!-- 店名横幅 -->
+    <Tabs></Tabs>
+  </view>
+  <!-- 头部 end -->
+  <!-- 中间部分 start -->
+  <scroll-view class="index-banner">
+    <!-- 老板推荐部分 -->
+    <!-- 老板推荐标题 -->
+    <view class="banner-title">
+      <text class="iconfont icon-aixin"></text>
+      <text>老板推荐</text>
+    </view>
+    <!-- 老板推荐菜品系列 -->
+    <scroll-view scroll-x class="banner-content">
+      <!-- 菜品详情 -->
+      <view class="content-view">
+        <image class="info-image" src="https://z3.ax1x.com/2021/04/26/gSwvU1.png" mode="widthFix"></image>
+        <view class="info-name">赣南暖心汤</view>
+        <view class="info-price">
+          <view class="price">¥18/份</view>
+          <view class="cart">✚</view>
+        </view>
+      </view>
+      <view class="content-view">
+        <image class="info-image" src="https://z3.ax1x.com/2021/04/26/gSw2uQ.png" mode="aspectFill"></image>
+        <view class="info-name">特色鸡蛋肉丝炒粉</view>
+        <view class="info-price">
+          <view class="price">¥18/份</view>
+          <view class="cart">✚</view>
+        </view>
+      </view>
+      <view class="content-view">
+        <image class="info-image" src="https://z3.ax1x.com/2021/04/26/gSw2uQ.png" mode="aspectFill"></image>
+        <view class="info-name">神仙猪肉拌粉</view>
+        <view class="info-price">
+          <view class="price">¥18/份</view>
+          <view class="cart">✚</view>
+        </view>
+      </view>
+      <view class="content-view">
+        <image class="info-image" src="https://z3.ax1x.com/2021/04/26/gSwvU1.png" mode="aspectFill"></image>
+        <view class="info-name">蒜爆牛肉汤粉</view>
+        <view class="info-price">
+          <view class="price">¥18/份</view>
+          <view class="cart">✚</view>
+        </view>
+      </view>
+    </scroll-view>
+  </scroll-view>
+  <!-- 中间部分 end -->
+  <!-- 尾部部分 start -->
+  <view class="index-footer">
+    <!-- 左侧菜单 -->
+    <scroll-view scroll-y="{{true}}" class="footer-left">
+      <view class="left-sort">锅气炒粉</view>
+      <view class="left-sort">锅气炒粉</view>
+      <view class="left-sort">锅气炒粉</view>
+      <view class="left-sort">锅气炒粉</view>
+      <view class="left-sort">锅气炒粉</view>
+      <view class="left-sort">锅气炒粉</view>
+      <view class="left-sort">锅气炒粉</view>
+      <view class="left-sort">锅气炒粉</view>
+    </scroll-view>
+    <!-- 右侧菜单 -->
+    <scroll-view scroll-y="{{true}}" class="footer-right">
+      <!-- 食物类别 -->
+      <view class="right-title">锅气炒粉</view>
+      <!-- 食物的详情 -->
+      <view class="right-content">
+        <!-- 食物的图片 -->
+        <image class="right-image" src="https://z3.ax1x.com/2021/04/27/g9bvnS.png" mode="widthFix"></image>
+        <!-- 菜名价格等 -->
+        <view class="right-price">
+          <!-- 菜名 -->
+          <view class="price-name">凉拌腐竹</view>
+          <!-- 月售 -->
+          <view class="price-sale">月售 11</view>
+          <!-- 价格 -->
+          <view class="price-price">¥32.31</view>
+          <!-- 选择口味 -->
+          <view class="price-selected">选规格</view>
+        </view>
+      </view>
+      <!-- !!!!!!!!!!!! -->
+      <view class="right-content">
+        <!-- 食物的图片 -->
+        <image class="right-image" src="https://z3.ax1x.com/2021/04/27/g9bvnS.png" mode="widthFix"></image>
+        <!-- 菜名价格等 -->
+        <view class="right-price">
+          <!-- 菜名 -->
+          <view class="price-name">凉拌腐竹</view>
+          <!-- 月售 -->
+          <view class="price-sale">月售 11</view>
+          <!-- 价格 -->
+          <view class="price-price">¥32.31</view>
+          <!-- 选择口味 -->
+          <view class="price-selected">选规格</view>
+        </view>
+      </view>
+      <view class="right-content">
+        <!-- 食物的图片 -->
+        <image class="right-image" src="https://z3.ax1x.com/2021/04/27/g9bvnS.png" mode="widthFix"></image>
+        <!-- 菜名价格等 -->
+        <view class="right-price">
+          <!-- 菜名 -->
+          <view class="price-name">凉拌腐竹</view>
+          <!-- 月售 -->
+          <view class="price-sale">月售 11</view>
+          <!-- 价格 -->
+          <view class="price-price">¥32.31</view>
+          <!-- 选择口味 -->
+          <view class="price-selected">选规格</view>
+        </view>
+      </view>
+      <view class="right-content">
+        <!-- 食物的图片 -->
+        <image class="right-image" src="https://z3.ax1x.com/2021/04/27/g9bvnS.png" mode="widthFix"></image>
+        <!-- 菜名价格等 -->
+        <view class="right-price">
+          <!-- 菜名 -->
+          <view class="price-name">凉拌腐竹</view>
+          <!-- 月售 -->
+          <view class="price-sale">月售 11</view>
+          <!-- 价格 -->
+          <view class="price-price">¥32.31</view>
+          <!-- 选择口味 -->
+          <view class="price-selected">选规格</view>
+        </view>
+      </view>
+      <view class="right-content">
+        <!-- 食物的图片 -->
+        <image class="right-image" src="https://z3.ax1x.com/2021/04/27/g9bvnS.png" mode="widthFix"></image>
+        <!-- 菜名价格等 -->
+        <view class="right-price">
+          <!-- 菜名 -->
+          <view class="price-name">凉拌腐竹</view>
+          <!-- 月售 -->
+          <view class="price-sale">月售 11</view>
+          <!-- 价格 -->
+          <view class="price-price">¥32.31</view>
+          <!-- 选择口味 -->
+          <view class="price-selected">选规格</view>
+        </view>
+      </view>
+      <view class="right-content">
+        <!-- 食物的图片 -->
+        <image class="right-image" src="https://z3.ax1x.com/2021/04/27/g9bvnS.png" mode="widthFix"></image>
+        <!-- 菜名价格等 -->
+        <view class="right-price">
+          <!-- 菜名 -->
+          <view class="price-name">凉拌腐竹</view>
+          <!-- 月售 -->
+          <view class="price-sale">月售 11</view>
+          <!-- 价格 -->
+          <view class="price-price">¥32.31</view>
+          <!-- 选择口味 -->
+          <view class="price-selected">选规格</view>
+        </view>
+      </view>
+      <!-- !!!!!!!!!!! -->
+    </scroll-view>
+  </view>
+  <!-- 尾部部分 end -->
+</view>
+<!-- 全局页面布局 end -->

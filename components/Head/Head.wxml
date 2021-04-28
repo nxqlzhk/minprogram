@@ -1,0 +1,21 @@
+<view class="orderNubmerCpn">
+  <!-- 上部分 -->
+  <view class="top">
+    <view class="number">您好，请选择就餐人数</view>
+    <view class="table">桌号 :  22</view>
+  </view>
+  <!-- 中间部分 -->
+  <view class="middle">
+    <scroll-view scroll-x="true" class="middle-view">
+      <view class="{{item.isClick?'checked':''}}" bindtap="changeBgc" wx:for="{{numbers}}" wx:key="item.id" data-index="{{index}}">
+        {{item.id}}
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 底部 -->
+  <view class="bottom" bindtap="getData" data-values="{{values}}">
+    <navigator class="start-order" url="../../pages/index/index" open-type="reLaunch">
+      <button>开始点餐</button>
+    </navigator>
+  </view>
+</view>
