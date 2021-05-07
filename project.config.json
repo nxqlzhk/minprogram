@@ -1,4 +1,5 @@
 {
+  "cloudfunctionRoot": "/cloud",
   "description": "项目配置文件",
   "packOptions": {
     "ignore": []
@@ -23,14 +24,13 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": true,
+    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
     "enableEngineNative": false,
-    "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
@@ -41,8 +41,8 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.16.1",
-  "appid": "wx69e30251ce7a17e2",
-  "projectname": "gnfj-023",
+  "appid": "wxe3c84e61b8dc2490",
+  "projectname": "minprogram-gnfj",
   "debugOptions": {
     "hidedInDevtools": []
   },

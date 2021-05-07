@@ -19,36 +19,12 @@
     <!-- 老板推荐菜品系列 -->
     <scroll-view scroll-x class="banner-content">
       <!-- 菜品详情 -->
-      <view class="content-view">
-        <image class="info-image" src="https://z3.ax1x.com/2021/04/26/gSwvU1.png" mode="widthFix"></image>
-        <view class="info-name">赣南暖心汤</view>
+      <view class="content-view" wx:for="{{recommendFoodList}}">
+        <image class="info-image" src="{{item.img_src}}" mode="widthFix" ></image>
+        <view class="info-name">{{item.name}}</view>
         <view class="info-price">
-          <view class="price">¥18/份</view>
-          <view class="cart">✚</view>
-        </view>
-      </view>
-      <view class="content-view">
-        <image class="info-image" src="https://z3.ax1x.com/2021/04/26/gSw2uQ.png" mode="aspectFill"></image>
-        <view class="info-name">特色鸡蛋肉丝炒粉</view>
-        <view class="info-price">
-          <view class="price">¥18/份</view>
-          <view class="cart">✚</view>
-        </view>
-      </view>
-      <view class="content-view">
-        <image class="info-image" src="https://z3.ax1x.com/2021/04/26/gSw2uQ.png" mode="aspectFill"></image>
-        <view class="info-name">神仙猪肉拌粉</view>
-        <view class="info-price">
-          <view class="price">¥18/份</view>
-          <view class="cart">✚</view>
-        </view>
-      </view>
-      <view class="content-view">
-        <image class="info-image" src="https://z3.ax1x.com/2021/04/26/gSwvU1.png" mode="aspectFill"></image>
-        <view class="info-name">蒜爆牛肉汤粉</view>
-        <view class="info-price">
-          <view class="price">¥18/份</view>
-          <view class="cart">✚</view>
+          <view class="price">{{item.price}}</view>
+          <view class="cart">{{item.addCart}}</view>
         </view>
       </view>
     </scroll-view>
