@@ -16,6 +16,10 @@
       <text class="iconfont icon-aixin"></text>
       <text>老板推荐</text>
     </view>
+    <!-- 搜索框 -->
+    <navigator class="banner-search" url="/pages/search/search" open-type="navigate">
+      <text class="iconfont icon-sousuo"></text>
+    </navigator>
     <!-- 老板推荐菜品系列 -->
     <scroll-view scroll-x class="banner-content">
       <!-- 菜品详情 -->

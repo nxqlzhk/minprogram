@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "iconfont";
+  /* Project id 2511171 */
+  src: url('//at.alicdn.com/t/font_2511171_t3ijmcqjg6h.woff2?t=1620745918501') format('woff2'), url('//at.alicdn.com/t/font_2511171_t3ijmcqjg6h.woff?t=1620745918501') format('woff'), url('//at.alicdn.com/t/font_2511171_t3ijmcqjg6h.ttf?t=1620745918501') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-sousuo1:before {
+  content: "\e696";
+}
+.icon-sousuo:before {
+  content: "\e616";
+}
+.icon-diancan:before {
+  content: "\e61b";
+}
+.icon-aixin:before {
+  content: "\e622";
+  /* 自定义主题 */
+  color: var(--themeColor);
+}
+.search-components .search-box {
+  height: 120rpx;
+  padding: 20rpx;
+  background-color: #EDEDEC;
+}
+.search-components .search-box .search-center {
+  position: relative;
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 50rpx;
+}
+.search-components .search-box .search-center .s-icon {
+  font-size: 36rpx;
+  position: absolute;
+  left: 18rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-components .search-box .search-center .s-input {
+  position: absolute;
+  left: 62rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}

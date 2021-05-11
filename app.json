@@ -3,7 +3,8 @@
     "pages/header/header",
     "pages/index/index",
     "pages/cart/cart",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",

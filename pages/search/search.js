@@ -1,4 +1,4 @@
-// pages/cart/cart.js
+// pages/search/search.js
 Page({
 
   /**
@@ -7,31 +7,12 @@ Page({
   data: {
 
   },
-  getCart(){
-    wx.cloud
-    .callFunction({
-      name: "getData",
-    })
-    .then(
-      (res) => {
-        // 结束刷新动画
-        wx.stopPullDownRefresh()
-        // this.setData({
-        //   recommendFoodList: res.result.data,
-        // });
-      },
-      (err) => {
-        console.log("error", err);
-      }
-    );
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 启动刷新动画
-    wx.startPullDownRefresh()
-    this.getCart()
+
   },
 
   /**
@@ -49,10 +30,24 @@ Page({
   },
 
   /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.getCart()
+
   },
 
   /**

@@ -1,0 +1,10 @@
+<view class="search-components">
+    <view class="search-box">
+        <view class="search-center">
+            <view class="iconfont icon-sousuo1 s-icon"></view>
+            <view class="s-input">
+                <input class="search-input" auto-focus placeholder="请输入菜品名" />
+            </view>
+        </view>
+    </view>
+</view>

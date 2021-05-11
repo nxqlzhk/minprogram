@@ -1,0 +1,4 @@
+<view class="search-page">
+  <!-- 搜索框 -->
+  <Search></Search>
+</view>

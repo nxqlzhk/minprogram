@@ -10,10 +10,18 @@
   z-index: 999;
 }
 .index-whole .index-banner .banner-title {
+  float: left;
   margin: 20rpx 0;
 }
 .index-whole .index-banner .banner-title text {
   color: var(--themeColor);
+}
+.index-whole .index-banner .banner-search {
+  float: right;
+  margin: 20rpx 20rpx;
+}
+.index-whole .index-banner .banner-search text {
+  font-size: 42rpx;
 }
 .index-whole .index-banner .banner-content {
   white-space: nowrap;
