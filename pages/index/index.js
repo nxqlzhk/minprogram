@@ -24,35 +24,11 @@ Page({
 		this.setData({
 			currentIndex: index,
 		});
-
 	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function () {
-		// 查询操作 传统写法
-		/*
-		wx.cloud.database().collection('recommend_food')
-			.get({
-				success(res){
-					console.log('请求成功',res)
-				},
-				fail(err){
-					console.log('请求失败',err)
-				}
-			})
-			
-		es6的写法
-		wx.cloud.database().collection('recommend_food')
-			.get().then(res => {
-				this.setData({
-					recommendFoodList: res.data
-				})
-			},err=>{
-				console.log('请求失败',err)
-			})
-		*/
-
 		// 云函数调用 获取recommend_food表中数据
 		wx.cloud
 			.callFunction({
@@ -92,6 +68,7 @@ Page({
 			})
 			.then(
 				(res) => {
+					console.log(res)
 					this.setData({
 						food_detail: res.result.data,
 					});

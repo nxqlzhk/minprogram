@@ -1,10 +1,34 @@
 <view class="search-components">
+    <!-- 搜索模块 start -->
     <view class="search-box">
         <view class="search-center">
+            <!-- 搜索图标 -->
             <view class="iconfont icon-sousuo1 s-icon"></view>
+            <!-- 搜索框 -->
             <view class="s-input">
-                <input class="search-input" auto-focus placeholder="请输入菜品名" />
+                <input class="search-input" placeholder="请输入菜品名" bindblur="queryDetails" />
             </view>
         </view>
     </view>
+    <!-- 搜索模块 end -->
+    <!-- 搜索结果展示 start -->
+    <!-- 食物的详情 -->
+    <scroll-view scroll-y="{{true}}" scroll-top="{{scrollTop}}" class="food-banner">
+        <view class="food-details" wx:for="{{foodList}}" wx:key="id" wx:for-item="item" wx:for-index="index">
+            <!-- 食物的图片 -->
+            <image class="food-image" src="{{item.img}}" mode="widthFix"></image>
+            <!-- 菜名价格等 -->
+            <view class="food-price-box">
+                <!-- 菜名 -->
+                <view class="food-name">{{item.name}}</view>
+                <!-- 月售 -->
+                <view class="food-sale">{{item.sale}}</view>
+                <!-- 价格 -->
+                <view class="food-price">{{item.price}}</view>
+                <!-- 选择口味 -->
+                <view class="food-selected">{{item.select}}</view>
+            </view>
+        </view>
+    </scroll-view>
+    <!-- 搜索结果展示 end -->
 </view>
