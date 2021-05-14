@@ -7,8 +7,9 @@ Page({
 		numOrder: "",
 		// 被点击的左侧菜单
 		currentIndex: 0,
-		// 右侧内容的滚动条距离顶部的距离
-		scrollTop: 0,
+		// 锚点定位
+		// scrollTopList: [0, 2040, 5640, 7150, 7510, 9070, 10630, 10990],
+		scrollTop: "",
 		// 老板推荐菜品数据
 		recommendFoodList: [],
 		// 菜品类别数据
@@ -25,6 +26,10 @@ Page({
 			currentIndex: index,
 		});
 	},
+
+	// 右侧滚动事件
+	rightScroll() {},
+
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
@@ -46,20 +51,20 @@ Page({
 			);
 
 		// 云函数调用 获取food_types表中数据
-		wx.cloud
-			.callFunction({
-				name: "getTypes",
-			})
-			.then(
-				(res) => {
-					this.setData({
-						food_types: res.result.data,
-					});
-				},
-				(err) => {
-					console.log("error", err);
-				}
-			);
+		// wx.cloud
+		// 	.callFunction({
+		// 		name: "getTypes",
+		// 	})
+		// 	.then(
+		// 		(res) => {
+		// 			this.setData({
+		// 				food_types: res.result.data,
+		// 			});
+		// 		},
+		// 		(err) => {
+		// 			console.log("error", err);
+		// 		}
+		// 	);
 
 		// 云函数调用 获取food_detail表中数据
 		wx.cloud
@@ -68,17 +73,17 @@ Page({
 			})
 			.then(
 				(res) => {
-					console.log(res)
 					this.setData({
 						food_detail: res.result.data,
+						food_types: res.result.data,
 					});
+					console.log(res.result.data)
 				},
 				(err) => {
 					console.log("error", err);
 				}
 			);
-	},
-
+		},
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
@@ -94,13 +99,4 @@ Page({
 		});
 	},
 
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {},
 });

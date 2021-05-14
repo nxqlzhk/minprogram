@@ -1,5 +1,7 @@
 @import "../../styles/iconfont.wxss";
 .search-components{
+  position: relative;
+  // 顶部搜索框
   .search-box{
     height: 120rpx;
     padding: 20rpx;
@@ -65,7 +67,7 @@
       }
       .food-selected{
         position: absolute;
-        right: 2rpx;
+        right: 18rpx;
         bottom: 0;
         width: 80rpx;
         height: 38rpx;
@@ -76,5 +78,14 @@
         background-color: #FFCD28;
       }
     }
+  }
+  .no-found{
+    position: absolute;
+    top: 520rpx;
+    left:50%;
+    transform: translateX(-50%);
+    height: 30rpx;
+    width: 180px;
+    color:#B8B8B8;
   }
 }

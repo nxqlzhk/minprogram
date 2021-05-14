@@ -1,2 +1,22 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <view class="btn-box">
+        <button bindtap="getUserProfile" class="getUserBtn">授权登录</button>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="info-box">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+        <navigator url="/pages/myOrder/myOrder" class="order" open-type="navigate" hover-stay-time="100">
+          我的订单
+        </navigator>
+        <!-- 在线客服、反馈意见 只有真机上有效果 -->
+        <button class="online" open-type="contact">在线客服</button>
+        <button class="suggest" open-type="feedback">反馈意见</button>
+        <button class="iphone" bindtap="callPhone">客服电话 044-735735</button>
+      </view>
+    </block>
+  </view>
+</view>

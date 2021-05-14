@@ -65,12 +65,12 @@
   background-color: #FFCD28;
 }
 .index-whole .index-footer {
-  border-top: 1px solid #F2F2F2;
-  padding-top: 10rpx;
   display: flex;
+  height: 1000rpx;
+  border-top: 1px solid #F2F2F2;
 }
 .index-whole .index-footer .footer-left {
-  padding-top: 24rpx;
+  height: 1000rpx;
   flex: 1;
 }
 .index-whole .index-footer .footer-left .left-sort {
@@ -87,14 +87,17 @@
   margin-top: 120rpx;
 }
 .index-whole .index-footer .footer-right {
+  height: 1000rpx;
   flex: 3;
 }
 .index-whole .index-footer .footer-right .right-title {
+  margin: 50rpx;
+  height: 20rpx;
+  line-height: 20rpx;
   font-size: 30rpx;
   font-weight: 900;
   color: #6B6B6B;
   text-align: center;
-  margin: 50rpx;
 }
 .index-whole .index-footer .footer-right .right-content {
   display: flex;
@@ -148,5 +151,5 @@
 }
 .active {
   color: #000 !important;
-  border-left: 4px solid #FFCD28;
+  border-left: 6rpx solid #FFCD28;
 }

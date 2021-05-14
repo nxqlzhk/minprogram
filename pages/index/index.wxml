@@ -37,14 +37,14 @@
   <!-- 尾部部分 start -->
   <view class="index-footer">
     <!-- 左侧菜单 -->
-    <scroll-view scroll-y="{{true}}" class="footer-left">
+    <scroll-view scroll-y="{{true}}" class="footer-left" scroll-with-animation="{{true}}">
       <view class="left-sort {{index===currentIndex?'active':''}}" wx:for="{{food_types}}" wx:key="_id" bindtap="handleItemTap" data-index="{{index}}">
         {{item.name}}
       </view>
     </scroll-view>
     <!-- 右侧菜单 -->
-    <scroll-view scroll-y="{{true}}" scroll-top="{{scrollTop}}" class="footer-right">
-      <view wx:for="{{food_detail}}" wx:key="_id" wx:for-item="item" wx:for-index="index">
+    <scroll-view scroll-y="{{true}}" bindscroll="rightScroll" scroll-into-view="{{scrollTop}}" class="footer-right">
+      <view id="{{item._id}}" wx:for="{{food_detail}}" wx:key="_id" wx:for-item="item" wx:for-index="index" class="food-detail-box">
         <!-- 食物类别 -->
         <view class="right-title">{{item.name}}</view>
         <!-- 食物的详情 -->

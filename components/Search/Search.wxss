@@ -24,6 +24,9 @@
   /* 自定义主题 */
   color: var(--themeColor);
 }
+.search-components {
+  position: relative;
+}
 .search-components .search-box {
   height: 120rpx;
   padding: 20rpx;
@@ -87,7 +90,7 @@
 }
 .search-components .food-details .food-price-box .food-selected {
   position: absolute;
-  right: 2rpx;
+  right: 18rpx;
   bottom: 0;
   width: 80rpx;
   height: 38rpx;
@@ -96,4 +99,13 @@
   text-align: center;
   border-radius: 20rpx;
   background-color: #FFCD28;
+}
+.search-components .no-found {
+  position: absolute;
+  top: 520rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30rpx;
+  width: 180px;
+  color: #B8B8B8;
 }
