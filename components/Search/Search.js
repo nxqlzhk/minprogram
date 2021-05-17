@@ -30,14 +30,18 @@ Component({
 				})
 				.then(
 					(res) => {
-						this.setData({
-							foodList: res.result.data,
-						});
-						console.log(this.data.foodList);
-						if (this.data.foodList === []) {
-							console.log("sss");
+						// 判断是否查找到数据
+						// 没有查找到数据，显示提示信息
+						if(res.result.data.length == 0){
 							this.setData({
+								foodList: [],
 								isShow: false,
+							});
+						}else {
+							// 查找到数据，显示数据
+							this.setData({
+								foodList: res.result.data,
+								isShow: true,
 							});
 						}
 					},

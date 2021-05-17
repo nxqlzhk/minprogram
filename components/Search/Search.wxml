@@ -33,5 +33,7 @@
         </scroll-view>
         <!-- 搜索结果展示 end -->
     </block>
-    <block wx:if="{{!isShow}}" class="no-found">未找到该菜品，请重新搜索</block>
+    <block wx:if="{{!isShow}}">
+        <text class="no-found">未找到该菜品，请重新搜索</text>
+    </block>
 </view>

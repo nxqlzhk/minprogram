@@ -28,13 +28,13 @@
         <view class="info-name">{{item.name}}</view>
         <view class="info-price">
           <view class="price">{{item.price}}</view>
-          <view class="cart">{{item.addCart}}</view>
+          <view class="cart" bindtap="handleRecommendData" data-name="{{item.name}}">{{item.addCart}}</view>
         </view>
       </view>
     </scroll-view>
   </scroll-view>
   <!-- 中间部分 end -->
-  <!-- 尾部部分 start -->
+  <!-- 右侧部分 start -->
   <view class="index-footer">
     <!-- 左侧菜单 -->
     <scroll-view scroll-y="{{true}}" class="footer-left" scroll-with-animation="{{true}}">
@@ -43,12 +43,12 @@
       </view>
     </scroll-view>
     <!-- 右侧菜单 -->
-    <scroll-view scroll-y="{{true}}" bindscroll="rightScroll" scroll-into-view="{{scrollTop}}" class="footer-right">
-      <view id="{{item._id}}" wx:for="{{food_detail}}" wx:key="_id" wx:for-item="item" wx:for-index="index" class="food-detail-box">
+    <scroll-view scroll-y="{{true}}" bindscroll="rightScroll" scroll-into-view="{{rightId}}" scroll-with-animation="{{true}}" class="footer-right">
+      <view id="{{'right'+item.id}}" wx:for="{{food_detail}}" wx:key="_id" wx:for-item="item" wx:for-index="index" class="food-detail-box">
         <!-- 食物类别 -->
         <view class="right-title">{{item.name}}</view>
         <!-- 食物的详情 -->
-        <view class="right-content" wx:for="{{item.details}}" wx:key="id" wx:for-item="item1" wx:for-index="index1">
+        <view class="right-content" wx:for="{{item.details}}" wx:key="id" wx:for-item="item1" data-key="{{item1.name}}">
           <!-- 食物的图片 -->
           <image class="right-image" src="{{item1.img}}" mode="widthFix"></image>
           <!-- 菜名价格等 -->
@@ -60,12 +60,12 @@
             <!-- 价格 -->
             <view class="price-price">{{item1.price}}</view>
             <!-- 选择口味 -->
-            <view class="price-selected">{{item1.select}}</view>
+            <view class="price-selected" bindtap="handleCartAdd" id="{{item1.id}}">{{item1.select}}</view>
           </view>
         </view>
       </view>
     </scroll-view>
   </view>
-  <!-- 尾部部分 end -->
+  <!-- 右侧部分 end -->
 </view>
 <!-- 全局页面布局 end -->
