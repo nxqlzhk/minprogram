@@ -27,8 +27,10 @@
         <image class="info-image" src="{{item.img_src}}" mode="widthFix"></image>
         <view class="info-name">{{item.name}}</view>
         <view class="info-price">
-          <view class="price">{{item.price}}</view>
-          <view class="cart" bindtap="handleRecommendData" data-name="{{item.name}}">{{item.addCart}}</view>
+          <view class="price">¥{{item.price}}</view>
+          <view class="cart" bindtap="handleCartAdd" data-name="{{item.name}}" id="{{item.id}}">
+            {{item.addCart}}
+          </view>
         </view>
       </view>
     </scroll-view>
@@ -58,9 +60,11 @@
             <!-- 月售 -->
             <view class="price-sale">{{item1.sale}}</view>
             <!-- 价格 -->
-            <view class="price-price">{{item1.price}}</view>
+            <view class="price-price">¥{{item1.price}}</view>
             <!-- 选择口味 -->
-            <view class="price-selected" bindtap="handleCartAdd" id="{{item1.id}}">{{item1.select}}</view>
+            <view class="price-selected" bindtap="handleCartAdd" id="{{item1.id}}">
+              {{item1.select}}
+            </view>
           </view>
         </view>
       </view>

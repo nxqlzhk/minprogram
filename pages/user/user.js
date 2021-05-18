@@ -16,10 +16,32 @@ Page({
 			});
 		}
 	},
+	// 获取用户信息
+	// getInformation(e) {
+	// 	// 获取用户信息
+	// 	const { encryptedData, errMsg, iv, signature } = e.detail;
+	// 	// 获取小程序登录成功后的code
+	// 	wx.login({
+	// 		timeout: 10000,
+	// 		success: (result) => {
+	// 			const { code } = result;
+	// 		},
+	// 	});
+	// 	// 封装参数
+	// 	const loginParams = { encryptedData, errMsg, iv, signature };
+	// 	// 发送请求 获取用户的token
+	// 	const res = await request({
+	// 		url: "https://api-hmugo-web.itheima.net/api/public/v1/users/wxlogin",
+	// 		data: loginParams,
+	// 		method: "post",
+	// 	});
+	// 	console.log(res);
+	// },
 
-	getUserProfile() {
+	getUserProfile(e) {
 		// wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
 		// 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+		console.log(e);
 		wx.getUserProfile({
 			desc: "用于完善会员资料", // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
 			success: (res) => {

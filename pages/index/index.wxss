@@ -51,15 +51,22 @@
 }
 .index-whole .index-banner .banner-content .content-view .info-price .price {
   flex: 1;
-  font-size: 28rpx;
-  text-align: left;
   margin-left: 20rpx;
+  font-size: 28rpx;
+  font-weight: 560;
+  text-align: left;
+}
+.index-whole .index-banner .banner-content .content-view .info-price .price:after {
+  content: '/份 起';
+  color: #B8B8B8;
+  font-size: 18rpx;
+  font-weight: 400;
 }
 .index-whole .index-banner .banner-content .content-view .info-price .cart {
   width: 46rpx;
   height: 46rpx;
   line-height: 46rpx;
-  margin-right: 4rpx;
+  margin-right: 12rpx;
   text-align: center;
   border-radius: 50%;
   background-color: #FFCD28;
@@ -125,7 +132,7 @@
   color: #B8B8B8;
 }
 .index-whole .index-footer .footer-right .right-content .right-price .price-price {
-  font-weight: 600;
+  font-weight: 560;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -140,7 +147,7 @@
   position: absolute;
   right: 2rpx;
   bottom: 0;
-  width: 80rpx;
+  width: 60rpx;
   height: 38rpx;
   line-height: 38rpx;
   font-size: 22rpx;

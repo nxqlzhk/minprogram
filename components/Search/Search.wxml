@@ -25,7 +25,7 @@
                     <!-- 月售 -->
                     <view class="food-sale">{{item.sale}}</view>
                     <!-- 价格 -->
-                    <view class="food-price">{{item.price}}</view>
+                    <view class="food-price">¥{{item.price}}</view>
                     <!-- 选择口味 -->
                     <view class="food-selected">{{item.select}}</view>
                 </view>

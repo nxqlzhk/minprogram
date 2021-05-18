@@ -34,7 +34,6 @@ Component({
 						// 没有查找到数据，显示提示信息
 						if(res.result.data.length == 0){
 							this.setData({
-								foodList: [],
 								isShow: false,
 							});
 						}else {
