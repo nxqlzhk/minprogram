@@ -45,7 +45,9 @@ Page({
 		const { index } = e.detail;
 		let { numbers } = this.data;
 		let values = index + 1;
-		wx.setStorageSync("numOrder",values);
+		// 把就餐人数存储在本地缓存中
+		wx.setStorageSync("numOrder", values);
+		// 循环数组，改变选中按钮的样式
 		numbers.forEach((v, i) =>
 			i == index ? (v.isClick = true) : (v.isClick = false)
 		);
@@ -75,16 +77,6 @@ Page({
 	onShow: function () {},
 
 	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {},
-
-	/**
 	 * 页面相关事件处理函数--监听用户下拉动作
 	 */
 	onPullDownRefresh: function () {},
@@ -93,9 +85,4 @@ Page({
 	 * 页面上拉触底事件的处理函数
 	 */
 	onReachBottom: function () {},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {},
 });

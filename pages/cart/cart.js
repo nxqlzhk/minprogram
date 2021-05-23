@@ -32,24 +32,10 @@
   3 直接取反 allChecked=!allChecked
   4 遍历购物车数组 让里面 商品 选中状态跟随  allChecked 改变而改变
   5 把购物车数组 和 allChecked 重新设置回data 把购物车重新设置回 缓存中 
-7 商品数量的编辑
-  1 "+" "-" 按钮 绑定同一个点击事件 区分的关键 自定义属性 
-    1 “+” "+1"
-    2 "-" "-1"
-  2 传递被点击的商品id 
-  3 获取data中的购物车数组 来获取需要被修改的商品对象
-  4 当 购物车的数量 =1 同时 用户 点击 "-"
-    弹窗提示(showModal) 询问用户 是否要删除
-    1 确定 直接执行删除
-    2 取消  什么都不做 
-  4 直接修改商品对象的数量 num
-  5 把cart数组 重新设置回 缓存中 和data中 this.setCart
-
-8 微信支付
-  1 筛选选中的数据
-	2 先判断缓存中有没有token，没有跳转到授权页面获取token，
-  2 经过以上的验证 跳转到 支付页面！ 
  */
+
+// 引入工具包，用于生成唯一ID
+import { randomOrder } from "../../utils/util";
 
 Page({
 	/**
@@ -62,7 +48,10 @@ Page({
 		allChecked: false,
 		// 总价格
 		totalPrice: 0,
+		// 总数量
 		totalNum: 0,
+		// 辣度
+		pepper: 0,
 	},
 	/**
 	 * 生命周期函数--监听页面加载
@@ -70,7 +59,6 @@ Page({
 	onLoad: function (options) {
 		// 启动刷新动画
 		// wx.startPullDownRefresh();
-		// this.getCart();
 	},
 
 	/**
@@ -164,22 +152,79 @@ Page({
 			this.setCart(cart);
 		}
 	},
+	// 辣度选择功能
+	handleSpicy(e) {
+		// 获取传递过来的参数
+		const { id } = e.currentTarget.dataset;
+		const value = e.detail.value;
+		// 获取购物车数组
+		let { cart } = this.data;
+		// 找到需要修改的商品的索引
+		const index = cart.findIndex((v) => v.id === id);
+		// 进行辣度修改
+		cart[index].pepper = value;
+		// 设置回缓存和data中
+		this.setCart(cart);
+	},
 
-	// 订单支付功能
+	// 模拟订单支付功能
 	handlePay() {
 		// 获取缓存中的购物车数据
 		const cart = wx.getStorageSync("cart") || [];
 		// 过滤后的购物车数组
 		let checkedCart = cart.filter((v) => v.checked);
 		this.setCart(checkedCart);
-		// 判断缓存中有没有token
-		const token = wx.getStorageSync("token");
-		if (!token) {
+		let newCart = wx.getStorageSync("cart");
+		// 判断缓存中有没有用户
+		const user = wx.getStorageSync("user");
+		if (!user) {
 			wx.switchTab({
 				url: "../user/user",
 			});
 			return;
+		} else {
+			// 弹窗提示
+			wx.showModal({
+				title: "支付",
+				content: "是否支付？",
+				success: (res) => {
+					if (res.confirm) {
+						// 根据时间生成随机唯一订单
+						const orderID = randomOrder();
+						// 获取总价格，获取总数量
+						const { totalPrice, totalNum } = this.data;
+						// 循环购物车数组 获取菜品 价格 数量 和辣度
+						let food = [];
+						for (let i = 0; i < newCart.length; i++) {
+							let id = newCart[i].id;
+							let name = newCart[i].name;
+							let num = newCart[i].num;
+							let price = newCart[i].price;
+							let pepper = "辣度：" + (newCart[i].pepper || 0);
+							if (id < 400) {
+								let foodDetail = { name, num, price, pepper };
+								food.push(foodDetail);
+							} else {
+								let foodDetail = { name, num, price };
+								food.push(foodDetail);
+							}
+						}
+						// 获取当前的日期与时间
+						const myDate = new Date();
+						let time = myDate.toLocaleString();
+						// 生成订单
+						const foodOrder = [orderID, totalNum, totalPrice, time];
+						wx.setStorageSync("foodOrder", foodOrder);
+						wx.setStorageSync("food", food);
+						wx.removeStorageSync("cart");
+						wx.switchTab({
+							url: "../myOrder/myOrder",
+						});
+					} else if (res.cancel) {
+						console.log("用户点击取消");
+					}
+				},
+			});
 		}
-		console.log("已经存在token");
 	},
 });

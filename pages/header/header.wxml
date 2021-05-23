@@ -1,7 +1,9 @@
 <view class="header-whole">
+  <!-- 欢迎语 -->
   <view class="welcome">欢迎来到</view>
   <view class="title">赣南粉局•江西锅气炒粉</view>
   <view class="orderNumber">
+    <!-- 引入组件 -->
     <Head numbers="{{numbers}}" values="{{values}}" bindbgcChange="handleBgcChange" bindgetValues="handleValues"></Head>
   </view>
   <image src="https://636c-cloud1-1gklnc7n550025ef-1305761944.tcb.qcloud.la/header.png" mode="widthFix"></image>

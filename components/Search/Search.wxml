@@ -26,8 +26,10 @@
                     <view class="food-sale">{{item.sale}}</view>
                     <!-- 价格 -->
                     <view class="food-price">¥{{item.price}}</view>
-                    <!-- 选择口味 -->
-                    <view class="food-selected">{{item.select}}</view>
+                    <!-- 添加购物车符号 -->
+                    <view class="food-selected" bindtap="handleCartAdd" id="{{item.id}}">
+                        {{item.select}}
+                    </view>
                 </view>
             </view>
         </scroll-view>

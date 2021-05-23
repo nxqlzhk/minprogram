@@ -16,16 +16,19 @@
 
 .container{
   position: relative;
+  // 按钮位置
   .btn-box {
     position: absolute;
     top: 300rpx;
     left: 50%;
     transform: translateX(-50%);
+    // 按钮样式
     .getUserBtn{
       background-color: #F8F8FF;
       border-radius: 20rpx;
     }
   }
+  // 授权登录后主体样式
   .info-box{
     display: flex;
     position: relative;
@@ -37,25 +40,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    // 用户头像
     .userinfo-avatar {
       width: 160rpx;
       height: 160rpx;
       border-radius: 50%;
     }
-
+    // 用户名称
     .userinfo-nickname {
       flex:1;
     }
+    // 我的订单页面跳转
     .order{
       flex: 1;
       background-color: #fff;
     }
+    // 在线客服
     .online{
       flex: 1;
     }
+    // 反馈意见
     .suggest{
       flex: 1;
     }
+    // 客服电话
     .iphone{
       flex: 1;
     }

@@ -68,7 +68,7 @@ Page({
 					console.log("error", err);
 				}
 			);
-		// 设置定时器
+		// 设置定时器 等数据加载完成
 		setTimeout(() => {
 			// 获取缓存中的购物车 数组
 			let cart = wx.getStorageSync("cart") || [];
@@ -92,14 +92,13 @@ Page({
 				// 防止用户一直点击
 				mask: true,
 			});
-		}, 700);
+		}, 1000);
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function () {
-		// 云函数调用 获取recommend_food表中数据
 		// 获取缓存中的数据
 		// 判断缓存中是否存在数据的变量
 		let isTrue;
@@ -110,6 +109,7 @@ Page({
 			isTrue = false;
 		}
 		if (isTrue) {
+			// 云函数调用 获取recommend_food表中数据
 			wx.cloud
 				.callFunction({
 					name: "getData",
@@ -190,7 +190,7 @@ Page({
 					heightArr.push(result);
 				});
 			});
-		}, 500);
+		}, 700);
 	},
 
 	/**

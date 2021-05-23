@@ -2,17 +2,20 @@ Page({
 	data: {
 		// 客服电话
 		phoneNumber: "044-735735",
+		// 个人信息
 		userInfo: {},
+		// 判断是否登录变量
 		hasUserInfo: false,
 	},
 	onLoad() {
+		// 获取缓存中数据
 		let user = wx.getStorageSync("user");
 		this.setData({
-			userInfo: user
+			userInfo: user,
 		});
-		if(user!=""){
+		if (user != "") {
 			this.setData({
-				hasUserInfo: true
+				hasUserInfo: true,
 			});
 		}
 	},
@@ -38,10 +41,10 @@ Page({
 	// 	console.log(res);
 	// },
 
+	// 获取用户个人信息
 	getUserProfile(e) {
 		// wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
 		// 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-		console.log(e);
 		wx.getUserProfile({
 			desc: "用于完善会员资料", // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
 			success: (res) => {

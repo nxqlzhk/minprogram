@@ -1,7 +1,11 @@
+<!-- Tabs组件 应用与index页面的顶部 -->
 <view class="tabs-whole">
   <view class="tabs-header">
+    <!-- 店名上的字体图标 -->
     <view class="iconfont icon-diancan tabs-order"></view>
+    <!-- 店名 -->
     <view class="tabs-title">赣南粉局•江西锅气炒粉</view>
+    <!-- 顶部图片 -->
     <image src="https://636c-cloud1-1gklnc7n550025ef-1305761944.tcb.qcloud.la/index-header.png" mode="widthFix"></image>
   </view>
 </view>

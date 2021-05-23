@@ -1,2 +1,21 @@
-<!--pages/myOrder/myOrder.wxml-->
-<text>pages/myOrder/myOrder.wxml</text>
+<!-- 判断是否存在订单 -->
+<block wx:if="{{food}}">
+  <view class="order-content">
+    <!-- 订单号 -->
+    <view class="order-id">订单号：{{foodOrder[0]}}</view>
+    <view class="order-food" wx:for="{{food}}" wx:key="name" wx-for:item="item" wx:for-index="index">
+      <!-- 菜名、价格、数量、辣度 -->
+      <text decode="{{true}}">{{item.name}}</text>
+      <text decode="{{true}}">&emsp;×{{item.num}}</text>
+      <text decode="{{true}}">&emsp;¥{{item.price}}</text>
+      <text class="food-pepper" decode="{{true}}">&emsp;{{item.pepper}}</text>
+    </view>
+    <!-- 总数量、总价格、下单时间 -->
+    <view class="order-totalNum">总数量：{{foodOrder[1]}}</view>
+    <view class="order-totalPrice">总价格：¥{{foodOrder[2]}}</view>
+    <view class="order-time">下单时间：{{foodOrder[3]}}</view>
+  </view>
+</block>
+<block wx:else>
+  <text class="no-order">没有订单，请先点单</text>
+</block>
